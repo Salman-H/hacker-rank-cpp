@@ -34,9 +34,9 @@ Sample Output
 int main() 
 {
   int sum{};
+  int num{};
   for (int i{}; i<3; ++i)
   {
-    int num{};
     std::cin >> num;
     sum += num;
   }
