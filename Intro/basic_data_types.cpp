@@ -30,27 +30,19 @@ Note: You can use cin and cout instead of scanf and printf; however, if
 */
 
 #include <iostream>
+#include <cstdio>
 
 int main()
 {
-  constexpr int FLOAT_PRECISION {3};
-  constexpr int DOUBLE_PRECISION {9};
-
   int    i {0};
   long   l {0l};
   char   c {0};
   float  f {0.0f};
   double d {0.0};
 
-  std::cin >> i >> l >> c >> f >> d;
+  scanf("%d %ld %c %f %lf", &i, &l, &c, &f, &d);
 
-  std::cout << std::fixed;
-  std::cout << i << '\n' << l << '\n' << c << '\n';
-  std::cout.precision(FLOAT_PRECISION);
-  std::cout << f << '\n';
-  std::cout.precision(DOUBLE_PRECISION);
-  std::cout << d << '\n';
+  printf("%d\n%ld\n%c\n%.3f\n%.9lf\n", i, l, c, f, d);
 
   return 0;
 }
-
